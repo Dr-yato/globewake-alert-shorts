@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""ALERT Short mix (no voice): music bed + quieter hit/whoosh/typing cues -> assets/audio/mix.wav, -14 LUFS / -2 dBTP.
+"""ALERT Short mix (no voice): music bed + quieter hit/whoosh/typing cues -> assets/audio/mix.wav, about -14 LUFS / -3 dBTP (leaves AAC headroom).
 The standing bed is Trevor Morris, "Hvitserk's Choice" (fetch_music.py). Do not commit the wav.
 
 alert.json "audio": {
@@ -8,7 +8,7 @@ alert.json "audio": {
   "cues": [{"file":..., "t":sec, "gain":.., "dur":optional trim}]
 }
 Recommended quieter SFX gains: alert hit 0.55, whoosh 0.35, impact 0.30, typing 0.35.
-Delivery QC: about -14 LUFS, true peak <= -1.5 dBFS (loudnorm targets TP -2; AAC can lift the peak a little).
+Delivery QC: about -14 LUFS, true peak <= -1.5 dBFS (loudnorm targets TP -3 so AAC overshoot still lands under -1.5).
 """
 import json, os, subprocess
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -51,9 +51,9 @@ for i, c in enumerate(AU.get("cues", [])):
 fl.append(f"{''.join(mix)}amix=inputs={len(mix)}:normalize=0:duration=first,atrim=0:{total},alimiter=limit=0.5:attack=3:release=80:level=disabled[pre]")
 tmp = ad("mix_pre.wav")
 subprocess.run(["ffmpeg", "-y", "-v", "error", *inputs, "-filter_complex", ";".join(fl), "-map", "[pre]", "-ar", "48000", tmp], check=True)
-r = subprocess.run(["ffmpeg", "-v", "info", "-i", tmp, "-af", "loudnorm=I=-14:TP=-2:LRA=11:print_format=json", "-f", "null", "-"], capture_output=True, text=True)
+r = subprocess.run(["ffmpeg", "-v", "info", "-i", tmp, "-af", "loudnorm=I=-14:TP=-3:LRA=11:print_format=json", "-f", "null", "-"], capture_output=True, text=True)
 j = json.loads(r.stderr[r.stderr.rfind("{"):r.stderr.rfind("}") + 1])
-ln = (f"loudnorm=I=-14:TP=-2:LRA=11:measured_I={j['input_i']}:measured_TP={j['input_tp']}:measured_LRA={j['input_lra']}"
+ln = (f"loudnorm=I=-14:TP=-3:LRA=11:measured_I={j['input_i']}:measured_TP={j['input_tp']}:measured_LRA={j['input_lra']}"
       f":measured_thresh={j['input_thresh']}:offset={j['target_offset']}:linear=true")
 subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", tmp, "-af", ln, "-ar", "48000", "-c:a", "pcm_s16le", ad("mix.wav")], check=True)
 os.remove(tmp)
