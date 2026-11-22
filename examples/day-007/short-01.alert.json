@@ -1,0 +1,262 @@
+{
+  "id": "day-007-short-01",
+  "duration": 15,
+  "alert_word": "ALERT",
+  "breaking_label": "BREAKING",
+  "headline": "AI helped crack a *167-year-old math mystery* worth $1 million",
+  "what_happened": "Mathematician Levent Alp\u00f6ge says he proved the Riemann hypothesis, posed by Bernhard Riemann in 1859, after about six weeks working with Anthropic's AI, Claude. On Saturday the Lean and Mathlib communities certified the 17-million-line computer proof as correct. Experts say it will take mathematicians a long time to digest.",
+  "source_line": "20-21 Nov 2026 \u00b7 Lean/Mathlib \u00b7 Nature \u00b7 Guardian \u00b7 SciAm",
+  "map_note": "Map lines illustrative",
+  "colors": {
+    "alert": "#FFD60A",
+    "hl": "#FFD60A",
+    "accent": "#FF3B30",
+    "bar": "#FF3B30"
+  },
+  "map": {
+    "R": 640,
+    "cam0": {
+      "lon": 10,
+      "lat": 30,
+      "k": 0.78,
+      "cx": 540,
+      "cy": 760
+    },
+    "intro_spin": 10,
+    "intro_veil": 0.62,
+    "cam1": {
+      "lon": -52,
+      "lat": 40,
+      "k": 0.84,
+      "cx": 540,
+      "cy": 600
+    },
+    "drift": {
+      "lon": -57,
+      "lat": 39,
+      "k": 0.9
+    },
+    "highlights": [
+      {
+        "id": "de",
+        "country": "Germany",
+        "color": "#3B6BC4",
+        "fill_opacity": 0.45,
+        "stroke": "#62C9EA",
+        "width": 2.4,
+        "glow": true,
+        "emblem": "assets/emblems/seal_gottingen.png",
+        "emblem_at": [
+          -22,
+          16
+        ],
+        "emblem_px": 300,
+        "opacity": 1.0,
+        "t": 1.15
+      },
+      {
+        "id": "us",
+        "country": "United States of America",
+        "min_area": 1e-05,
+        "color": "#FF3B30",
+        "fill_opacity": 0.16,
+        "stroke": "#FF6A5F",
+        "width": 2.2,
+        "glow": true,
+        "t": 1.25
+      }
+    ],
+    "arcs": [
+      {
+        "id": "route",
+        "from": [
+          9.93,
+          51.54
+        ],
+        "to": [
+          -122.42,
+          37.77
+        ],
+        "dash": null,
+        "glow": true,
+        "dots": false,
+        "width": 2.6,
+        "pulse": 0.3,
+        "phase": 0,
+        "t": 1.7,
+        "dur": 1.4,
+        "opacity": 0.9
+      },
+      {
+        "id": "routeflow",
+        "from": [
+          9.93,
+          51.54
+        ],
+        "to": [
+          -122.42,
+          37.77
+        ],
+        "dash": "22 520",
+        "glow": true,
+        "dots": false,
+        "width": 3.5,
+        "pulse": 0,
+        "phase": 0,
+        "t": 3.1,
+        "dur": 0.01,
+        "opacity": 0.7,
+        "color": "#FFB4AE",
+        "flow": 240
+      }
+    ],
+    "dots": [
+      {
+        "id": "got",
+        "lon": 9.93,
+        "lat": 51.54,
+        "r": 7,
+        "t": 1.6
+      },
+      {
+        "id": "sf",
+        "lon": -122.42,
+        "lat": 37.77,
+        "r": 8,
+        "t": 2.9
+      }
+    ],
+    "labels": [
+      {
+        "id": "lg",
+        "text": "G\u00f6ttingen \u00b7 1859",
+        "at": [
+          9.93,
+          51.54
+        ],
+        "dx": -20,
+        "dy": 30,
+        "size": 18,
+        "t": 1.9
+      },
+      {
+        "id": "lsf",
+        "text": "San Francisco \u00b7 2026",
+        "at": [
+          -122.42,
+          37.77
+        ],
+        "dx": 60,
+        "dy": -28,
+        "size": 18,
+        "t": 3.0
+      },
+      {
+        "id": "lus",
+        "text": "United States",
+        "at": [
+          -96,
+          36
+        ],
+        "dx": 0,
+        "dy": -26,
+        "size": 30,
+        "t": 1.8,
+        "style": "country",
+        "color": "#FFB4AE"
+      },
+      {
+        "id": "latl",
+        "text": "Atlantic Ocean",
+        "at": [
+          -42,
+          36
+        ],
+        "dx": 0,
+        "dy": -26,
+        "size": 22,
+        "t": 2.2,
+        "style": "sea"
+      }
+    ],
+    "relief_brightness": 1.0,
+    "px": 1.0,
+    "relief_contrast": 1.1,
+    "tags": []
+  },
+  "audio": {
+    "bed": "bed_hvitserk.wav",
+    "bed_gain": 0.42,
+    "bed_start": 0,
+    "bed_fade_in": 0.3,
+    "cues": [
+      {
+        "file": "sfx_alert_hit.mp3",
+        "t": 0.0,
+        "gain": 0.55,
+        "dur": 2.2
+      },
+      {
+        "file": "sfx_whoosh2.mp3",
+        "t": 0.18,
+        "gain": 0.35,
+        "dur": 1.6
+      },
+      {
+        "file": "sfx_impact.mp3",
+        "t": 0.35,
+        "gain": 0.3,
+        "dur": 1.2
+      },
+      {
+        "file": "sfx_typing.mp3",
+        "t": 0.55,
+        "gain": 0.35,
+        "dur": 4.2
+      }
+    ]
+  },
+  "sources": [
+    {
+      "name": "Lean & Mathlib communities",
+      "title": "Lean verification of the Riemann Hypothesis (21 Nov 2026)",
+      "url": "https://leanprover-community.github.io/blog/posts/riemann-hypothesis/"
+    },
+    {
+      "name": "Nature",
+      "title": "Mathematicians astounded by AI and human-written proofs of iconic Riemann hypothesis",
+      "url": "https://www.nature.com/articles/d41586-026-03812-7"
+    },
+    {
+      "name": "The Guardian",
+      "title": "Two groups verify mathematician's claim that Claude helped prove mathematics problem",
+      "url": "https://www.theguardian.com/technology/2026/nov/21/anthropic-riemann-hypothesis-solved-claude-ai"
+    },
+    {
+      "name": "Scientific American",
+      "title": "The AI Riemann hypothesis proof is true, independent mathematicians confirm",
+      "url": "https://www.scientificamerican.com/article/the-ai-riemann-hypothesis-proof-is-almost-certainly-true-independent-mathematicians-attest/"
+    }
+  ],
+  "credits": [
+    "emblem",
+    "relief",
+    "borders",
+    "sfx",
+    "music",
+    {
+      "role": "Music",
+      "credit": "Hvitserk's Choice \u2014 Trevor Morris (Vikings: The Final Season / Sony Classical). Cue 2:20.6\u20132:35.6 from the official SonySoundtracksVEVO upload https://www.youtube.com/watch?v=Dpx9JStb1ko. The wav is fetched locally and is not in the repo."
+    }
+  ],
+  "logo_w": 320,
+  "logo_top": 255,
+  "timing": {
+    "sweep1": [
+      0.04,
+      0.62
+    ],
+    "ease1": "power1.inOut"
+  },
+  "geo": "world-10m.js"
+}

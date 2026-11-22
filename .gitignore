@@ -1,0 +1,47 @@
+# secrets and tokens
+publish/secrets/*
+!publish/secrets/README.md
+*.json.token
+*token*.json
+client_secret*.json
+.env
+.env.*
+
+# dependencies and HyperFrames cache
+node_modules/
+.hyperframes/
+__pycache__/
+*.pyc
+
+# renders and delivery
+renders/
+exports/
+*.mp4
+*.mov
+*.mkv
+*.webm
+
+# copyrighted / large audio — never commit the score
+*.wav
+*.flac
+assets/audio/bed_hvitserk.wav
+assets/audio/hvitserks_choice*
+tools/music/
+music_raw/
+brand/music/
+
+# NASA Blue Marble rasters and baked globe textures (large, PD, fetch locally)
+tools/raster/bluemarble/
+tools/raster/*.tif
+tools/raster/*.tiff
+tools/raster/*.jpg
+template/short-alert/assets/globe/*.jpg
+template/short-alert/assets/globe/tiles.json
+template/short-alert/compositions/
+template/short-alert/index.html
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.swp

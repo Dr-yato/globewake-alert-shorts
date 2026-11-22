@@ -1,0 +1,309 @@
+{
+  "id": "day-007-short-03",
+  "duration": 15,
+  "alert_word": "ALERT",
+  "breaking_label": "BREAKING",
+  "headline": "*17 million lines* of AI-assisted proof checked by computers. Humans haven't digested it yet",
+  "what_happened": "Levent Alp\u00f6ge's Riemann hypothesis proof, found with Claude, is a Lean library of 175,187 files and about 17 million lines. Dozens of people rebuilt it and independent checkers accepted it. But it is 'crazily complicated', a mathematician told Nature, and will take humans a long time to digest.",
+  "source_line": "21-22 Nov 2026 \u00b7 Lean/Mathlib \u00b7 MIT \u00b7 Waterloo \u00b7 Nature",
+  "map_note": "Map lines illustrative",
+  "colors": {
+    "alert": "#FFD60A",
+    "hl": "#FFD60A",
+    "accent": "#FF3B30",
+    "bar": "#FF3B30"
+  },
+  "map": {
+    "R": 640,
+    "cam0": {
+      "lon": -40,
+      "lat": 30,
+      "k": 0.78,
+      "cx": 540,
+      "cy": 760
+    },
+    "intro_spin": 10,
+    "intro_veil": 0.62,
+    "cam1": {
+      "lon": -99,
+      "lat": 42,
+      "k": 1.7,
+      "cx": 540,
+      "cy": 600
+    },
+    "drift": {
+      "lon": -97,
+      "lat": 42,
+      "k": 1.85
+    },
+    "highlights": [
+      {
+        "id": "us",
+        "country": "United States of America",
+        "min_area": 1e-05,
+        "color": "#FF3B30",
+        "fill_opacity": 0.16,
+        "stroke": "#FF6A5F",
+        "width": 2.2,
+        "glow": true,
+        "emblem": "assets/emblems/seal_us.png",
+        "emblem_at": [
+          -97,
+          34.5
+        ],
+        "emblem_px": 300,
+        "opacity": 1.0,
+        "t": 1.15
+      },
+      {
+        "id": "ca",
+        "country": "Canada",
+        "color": "#3B6BC4",
+        "fill_opacity": 0.22,
+        "stroke": "#62C9EA",
+        "width": 1.8,
+        "glow": true,
+        "t": 1.3
+      }
+    ],
+    "arcs": [
+      {
+        "id": "a1",
+        "from": [
+          -122.42,
+          37.77
+        ],
+        "to": [
+          -71.09,
+          42.36
+        ],
+        "dash": null,
+        "glow": true,
+        "dots": false,
+        "width": 2.6,
+        "pulse": 0.3,
+        "phase": 0,
+        "t": 1.8,
+        "dur": 1.2,
+        "opacity": 0.9
+      },
+      {
+        "id": "a2",
+        "from": [
+          -122.42,
+          37.77
+        ],
+        "to": [
+          -80.54,
+          43.47
+        ],
+        "dash": null,
+        "glow": true,
+        "dots": false,
+        "width": 2.6,
+        "pulse": 0.3,
+        "phase": 0,
+        "t": 1.95,
+        "dur": 1.2,
+        "opacity": 0.9
+      },
+      {
+        "id": "f1",
+        "from": [
+          -122.42,
+          37.77
+        ],
+        "to": [
+          -71.09,
+          42.36
+        ],
+        "dash": "22 520",
+        "glow": true,
+        "dots": false,
+        "width": 3.5,
+        "pulse": 0,
+        "phase": 0,
+        "t": 3.2,
+        "dur": 0.01,
+        "opacity": 0.7,
+        "color": "#FFB4AE",
+        "flow": 240
+      },
+      {
+        "id": "f2",
+        "from": [
+          -122.42,
+          37.77
+        ],
+        "to": [
+          -80.54,
+          43.47
+        ],
+        "dash": "22 520",
+        "glow": true,
+        "dots": false,
+        "width": 3.5,
+        "pulse": 0,
+        "phase": 0,
+        "t": 3.4,
+        "dur": 0.01,
+        "opacity": 0.7,
+        "color": "#FFB4AE",
+        "flow": 240
+      }
+    ],
+    "dots": [
+      {
+        "id": "sf",
+        "lon": -122.42,
+        "lat": 37.77,
+        "r": 8,
+        "t": 1.6
+      },
+      {
+        "id": "mit",
+        "lon": -71.09,
+        "lat": 42.36,
+        "r": 7,
+        "t": 2.8
+      },
+      {
+        "id": "wat",
+        "lon": -80.54,
+        "lat": 43.47,
+        "r": 7,
+        "t": 2.9
+      }
+    ],
+    "labels": [
+      {
+        "id": "lsf",
+        "text": "San Francisco \u00b7 proof posted",
+        "at": [
+          -122.42,
+          37.77
+        ],
+        "dx": 150,
+        "dy": -30,
+        "size": 18,
+        "t": 1.8
+      },
+      {
+        "id": "lmit",
+        "text": "MIT \u00b7 checked",
+        "at": [
+          -71.09,
+          42.36
+        ],
+        "dx": -10,
+        "dy": 38,
+        "size": 18,
+        "t": 3.0
+      },
+      {
+        "id": "lwat",
+        "text": "Waterloo \u00b7 checked",
+        "at": [
+          -80.54,
+          43.47
+        ],
+        "dx": -70,
+        "dy": -30,
+        "size": 18,
+        "t": 3.1
+      },
+      {
+        "id": "lca",
+        "text": "Canada",
+        "at": [
+          -100,
+          56
+        ],
+        "dx": 0,
+        "dy": -26,
+        "size": 30,
+        "t": 1.9,
+        "style": "country"
+      }
+    ],
+    "relief_brightness": 1.0,
+    "px": 1.0,
+    "relief_contrast": 1.1,
+    "tags": []
+  },
+  "audio": {
+    "bed": "bed_hvitserk.wav",
+    "bed_gain": 0.42,
+    "bed_start": 0,
+    "bed_fade_in": 0.3,
+    "cues": [
+      {
+        "file": "sfx_alert_hit.mp3",
+        "t": 0.0,
+        "gain": 0.55,
+        "dur": 2.2
+      },
+      {
+        "file": "sfx_whoosh2.mp3",
+        "t": 0.18,
+        "gain": 0.35,
+        "dur": 1.6
+      },
+      {
+        "file": "sfx_impact.mp3",
+        "t": 0.35,
+        "gain": 0.3,
+        "dur": 1.2
+      },
+      {
+        "file": "sfx_typing.mp3",
+        "t": 0.55,
+        "gain": 0.35,
+        "dur": 4.2
+      }
+    ]
+  },
+  "sources": [
+    {
+      "name": "Lean & Mathlib communities",
+      "title": "Lean verification of the Riemann Hypothesis (21 Nov 2026)",
+      "url": "https://leanprover-community.github.io/blog/posts/riemann-hypothesis/"
+    },
+    {
+      "name": "Andrew Sutherland (MIT)",
+      "title": "RH Lean proof: verification files",
+      "url": "https://math.mit.edu/~drew/grh/"
+    },
+    {
+      "name": "Michael Rubinstein (Waterloo)",
+      "title": "Alp\u00f6ge/Claude proof of the Generalized Riemann Hypothesis",
+      "url": "https://www.math.uwaterloo.ca/~mrubinst/alpoge_claude_grh/"
+    },
+    {
+      "name": "Nature",
+      "title": "Mathematicians astounded by AI and human-written proofs of iconic Riemann hypothesis",
+      "url": "https://www.nature.com/articles/d41586-026-03812-7"
+    }
+  ],
+  "credits": [
+    "emblem",
+    "relief",
+    "borders",
+    "sfx",
+    "music",
+    {
+      "role": "Music",
+      "credit": "Hvitserk's Choice \u2014 Trevor Morris (Vikings: The Final Season / Sony Classical). Cue 2:20.6\u20132:35.6 from the official SonySoundtracksVEVO upload https://www.youtube.com/watch?v=Dpx9JStb1ko. The wav is fetched locally and is not in the repo."
+    }
+  ],
+  "logo_w": 320,
+  "logo_top": 255,
+  "timing": {
+    "sweep1": [
+      0.04,
+      0.62
+    ],
+    "ease1": "power1.inOut"
+  },
+  "geo": "world-10m.js"
+}

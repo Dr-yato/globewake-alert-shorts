@@ -1,0 +1,196 @@
+{
+  "id": "day-007-short-02",
+  "duration": 15,
+  "alert_word": "ALERT",
+  "breaking_label": "BREAKING",
+  "headline": "Riemann proof certified, but the *$1 million prize must wait at least 2 years*",
+  "what_happened": "The Clay Mathematics Institute offers $1 million for each of its seven Millennium Prize Problems. Its rules: a solution must be published in a qualifying outlet, survive at least two years, and win general acceptance. Alp\u00f6ge's AI-assisted proof was posted on his website on 20 November. Only one Millennium problem has ever been officially solved.",
+  "source_line": "Clay Mathematics Institute rules \u00b7 The Verge \u00b7 Nature \u00b7 22 Nov 2026",
+  "map_note": "Map lines illustrative",
+  "colors": {
+    "alert": "#FFD60A",
+    "hl": "#FFD60A",
+    "accent": "#FF3B30",
+    "bar": "#FF3B30"
+  },
+  "map": {
+    "R": 640,
+    "cam0": {
+      "lon": -30,
+      "lat": 30,
+      "k": 0.78,
+      "cx": 540,
+      "cy": 760
+    },
+    "intro_spin": 10,
+    "intro_veil": 0.62,
+    "cam1": {
+      "lon": -3.2,
+      "lat": 53.6,
+      "k": 4.6,
+      "cx": 540,
+      "cy": 600
+    },
+    "drift": {
+      "lon": -2.0,
+      "lat": 52.6,
+      "k": 5.6
+    },
+    "highlights": [
+      {
+        "id": "uk",
+        "country": "United Kingdom",
+        "min_area": 1e-06,
+        "color": "#FF3B30",
+        "fill_opacity": 0.18,
+        "stroke": "#FF6A5F",
+        "width": 2.4,
+        "glow": true,
+        "emblem": "assets/emblems/seal_clay.png",
+        "emblem_at": [
+          -12.5,
+          56.8
+        ],
+        "emblem_px": 310,
+        "opacity": 1.0,
+        "t": 1.15
+      }
+    ],
+    "arcs": [],
+    "dots": [
+      {
+        "id": "ox",
+        "lon": -1.258,
+        "lat": 51.752,
+        "r": 9,
+        "t": 1.9
+      }
+    ],
+    "labels": [
+      {
+        "id": "lox",
+        "text": "Oxford",
+        "at": [
+          -1.258,
+          51.752
+        ],
+        "dx": 0,
+        "dy": 40,
+        "size": 20,
+        "t": 2.1
+      },
+      {
+        "id": "luk",
+        "text": "United Kingdom",
+        "at": [
+          -1.6,
+          54.4
+        ],
+        "dx": 0,
+        "dy": -26,
+        "size": 26,
+        "t": 1.7,
+        "style": "country",
+        "color": "#FFB4AE"
+      },
+      {
+        "id": "lns",
+        "text": "North Sea",
+        "at": [
+          3.0,
+          55.5
+        ],
+        "dx": 0,
+        "dy": -26,
+        "size": 20,
+        "t": 2.2,
+        "style": "sea"
+      }
+    ],
+    "relief_brightness": 1.0,
+    "px": 1.0,
+    "relief_contrast": 1.1,
+    "tags": [
+      {
+        "id": "tox",
+        "at": [
+          -1.258,
+          51.752
+        ],
+        "label": "Clay Mathematics Institute",
+        "side": "right",
+        "t": 2.4
+      }
+    ]
+  },
+  "audio": {
+    "bed": "bed_hvitserk.wav",
+    "bed_gain": 0.42,
+    "bed_start": 0,
+    "bed_fade_in": 0.3,
+    "cues": [
+      {
+        "file": "sfx_alert_hit.mp3",
+        "t": 0.0,
+        "gain": 0.55,
+        "dur": 2.2
+      },
+      {
+        "file": "sfx_whoosh2.mp3",
+        "t": 0.18,
+        "gain": 0.35,
+        "dur": 1.6
+      },
+      {
+        "file": "sfx_impact.mp3",
+        "t": 0.35,
+        "gain": 0.3,
+        "dur": 1.2
+      },
+      {
+        "file": "sfx_typing.mp3",
+        "t": 0.55,
+        "gain": 0.35,
+        "dur": 4.2
+      }
+    ]
+  },
+  "sources": [
+    {
+      "name": "Clay Mathematics Institute",
+      "title": "Rules for the Millennium Prize Problems",
+      "url": "https://www.claymath.org/millennium-problems/rules/"
+    },
+    {
+      "name": "The Verge",
+      "title": "Anthropic mathematician claims to have solved prestigious Millennium Prize problem with Claude",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1010051/anthropic-riemann-hypothesis-millennium-prize-problem"
+    },
+    {
+      "name": "Nature",
+      "title": "Mathematicians astounded by AI and human-written proofs of iconic Riemann hypothesis",
+      "url": "https://www.nature.com/articles/d41586-026-03812-7"
+    }
+  ],
+  "credits": [
+    "emblem",
+    "relief",
+    "borders",
+    "sfx",
+    "music",
+    {
+      "role": "Music",
+      "credit": "Hvitserk's Choice \u2014 Trevor Morris (Vikings: The Final Season / Sony Classical). Cue 2:20.6\u20132:35.6 from the official SonySoundtracksVEVO upload https://www.youtube.com/watch?v=Dpx9JStb1ko. The wav is fetched locally and is not in the repo."
+    }
+  ],
+  "logo_w": 320,
+  "logo_top": 255,
+  "timing": {
+    "sweep1": [
+      0.04,
+      0.62
+    ],
+    "ease1": "power1.inOut"
+  },
+  "geo": "world-10m.js"
+}
