@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
-"""ALERT Short mix (no voice): music bed + quieter hit/whoosh/typing cues -> assets/audio/mix.wav, about -14 LUFS / -3 dBTP (leaves AAC headroom).
+"""ALERT Short mix (no voice): Hvitserk's Choice plus the typing SFX only -> assets/audio/mix.wav, about -14 LUFS / -3 dBTP (leaves AAC headroom).
 The standing bed is Trevor Morris, "Hvitserk's Choice" (fetch_music.py). Do not commit the wav.
 
+Default audio.cues: typing only (t=0.55, gain=0.35, dur=4.2). Do not add the ALERT hit, the whoosh, or the impact.
+
 alert.json "audio": {
-  "bed": file, "bed_gain": 0.4, "bed_start": 0,   # bed_start in seconds if the file is the full official track
+  "bed": file, "bed_gain": 0.42, "bed_start": 0,   # bed_start in seconds if the file is the full official track
   "bed_fade_in": 0.3,
-  "cues": [{"file":..., "t":sec, "gain":.., "dur":optional trim}]
+  "cues": [{"file": "sfx_typing.mp3", "t": 0.55, "gain": 0.35, "dur": 4.2}]
 }
-Recommended quieter SFX gains: alert hit 0.55, whoosh 0.35, impact 0.30, typing 0.35.
 Delivery QC: about -14 LUFS, true peak <= -1.5 dBFS (loudnorm targets TP -3 so AAC overshoot still lands under -1.5).
 """
 import json, os, subprocess

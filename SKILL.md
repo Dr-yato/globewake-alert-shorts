@@ -40,7 +40,7 @@ Important fields:
 | `audio.bed` | `bed_hvitserk.wav` (fetched, never committed). |
 | `audio.bed_start` | `0` when the file is the pre-trimmed 16 s cue from `scripts/fetch_music.py`. Use `140.6` only if the file is the full official track. |
 | `audio.bed_gain`, `audio.bed_fade_in` | Defaults `0.42` and `0.3`. |
-| `audio.cues` | Quieter SFX than the first drafts: alert hit `0.55`, whoosh `0.35`, impact `0.30`, typing `0.35`. |
+| `audio.cues` | Typing SFX only: `sfx_typing` at `t` 0.55, gain `0.35`, `dur` 4.2. Do **not** add the ALERT hit, the whoosh, or the impact. |
 | `credits` | Sources, map attribution, emblem Commons file, and the music credit below. |
 
 The template `alert.json` is the Sparta II story (Finland / NATO / wreck of *Sparta II*). Worked day-007 configs are in `examples/day-007/`.
@@ -114,7 +114,7 @@ Standing bed for **every** ALERT Short (and every Globewake Short — not episod
 - Official source only: the SonySoundtracksVEVO upload https://www.youtube.com/watch?v=Dpx9JStb1ko
 - Section: **2:20.6–2:35.6** (140.6–155.6 s of that upload). A cross-check against a finished mix put the cue start at 140.598 s; use **140.6**.
 - The track itself is **not committed**. `scripts/fetch_music.py` writes a 16 s, 48 kHz stereo cue to `assets/audio/bed_hvitserk.wav` (extra second so the 0.35 s fade-out does not undershoot 15 s). Set `GW_HVITSERK_WAV` to skip a live YouTube download when a local copy of the official track already exists.
-- SFX are original and live in the template (`sfx_alert_hit`, `sfx_whoosh2`, `sfx_impact`, `sfx_typing`). Use the quieter gains above so the score can sit near the loudness target without the opening hit clipping.
+- Default mix is **Hvitserk’s Choice plus the typing SFX only** (`sfx_typing` at `t` 0.55, gain 0.35, `dur` 4.2), timed under the headline type-on. Do **not** add the ALERT hit, the whoosh, or the impact. Those files still live in the template for older mixes, but they are not the default.
 - Mix: `scripts/mix_alert.py` → `assets/audio/mix.wav`. Target about **−14 LUFS**, true peak **≤ −1.5 dB** on the finished mp4. The loudnorm filter is `I=-14:TP=-3` so AAC overshoot still lands under −1.5 dB (TP −2 on the wav was lifting the AAC file to about −1.1 dBTP).
 - Duck the bed under VO if a Short ever has VO (standard ALERT cards do not).
 - YouTube Content ID claims on this cue are expected and accepted.
@@ -172,7 +172,7 @@ After the Short is on YouTube, write a TikTok caption that includes the Short UR
 - The cue starts at **140.6 s**, not 143 s (an earlier cross-correlation was wrong because the mix window started at 2.5 s).
 - The music rule is **Shorts only**. Do not re-bed a finished episode with Hvitserk’s Choice.
 - Accept YouTube claims. Do not double-attach the sound on TikTok.
-- Quieter SFX (hit 0.55 / whoosh 0.35 / typing 0.35 / impact 0.30). Louder defaults with the same loudnorm still came out around −14.9 LUFS with a hot opening.
+- Default audio is the music bed plus typing only. Earlier Shorts also used an ALERT hit, a whoosh, and an impact; those were dropped because they felt too heavy over the score. Do not put them back.
 - Judge true peak on the AAC file (≤ −1.5 dB). The mixer aims at −3 dBTP so AAC overshoot still clears the cap.
 - Remux `mix.wav` in `finish_alert.sh`. Shipping `raw.mp4` audio is a bug.
 - HyperFrames: one render at a time, pin `0.9.46`, `map.px 1.0` is slow, snapshot first.

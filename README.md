@@ -51,7 +51,7 @@ Publishing (YouTube first, then TikTok Studio with the YouTube link in the capti
 
 ## Rules that are easy to miss
 
-- **Shorts only** always use “Hvitserk’s Choice.” Episodes keep varied beds.
+- **Shorts only** always use “Hvitserk’s Choice.” Default ALERT mix is that bed **plus the typing SFX only** — no ALERT hit, no whoosh, no impact. Episodes keep varied beds.
 - The centre graphic is a **real official seal or logo** from Commons, wrapped by `make_seal.py`. Never invent a typographic badge.
 - Do not commit the score, OAuth tokens, or Blue Marble rasters.
 - Pin HyperFrames at `0.9.46`. Render one Short at a time. Target about −14 LUFS, true peak ≤ −1.5 dB on the finished mp4.

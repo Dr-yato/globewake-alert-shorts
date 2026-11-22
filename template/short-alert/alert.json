@@ -477,24 +477,6 @@
     "bed_fade_in": 0.3,
     "cues": [
       {
-        "file": "sfx_alert_hit.mp3",
-        "t": 0.0,
-        "gain": 0.55,
-        "dur": 2.2
-      },
-      {
-        "file": "sfx_whoosh2.mp3",
-        "t": 0.18,
-        "gain": 0.35,
-        "dur": 1.6
-      },
-      {
-        "file": "sfx_impact.mp3",
-        "t": 0.35,
-        "gain": 0.3,
-        "dur": 1.2
-      },
-      {
         "file": "sfx_typing.mp3",
         "t": 0.55,
         "gain": 0.35,
