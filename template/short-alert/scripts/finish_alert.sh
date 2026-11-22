@@ -2,9 +2,15 @@
 # usage: finish_alert.sh <project_dir> <out.mp4>
 # two-pass 1080×1920 encode, remux assets/audio/mix.wav, QC (decode, LUFS, peak, letterbox, black frames)
 set -e
-P=$(realpath "$1"); O=$(realpath -m "$2"); R=$P/renders/raw.mp4; MIX=$P/assets/audio/mix.wav
-mkdir -p "$(dirname "$O")"; cd "$P/renders"
+P=$(realpath "$1"); O=$(realpath -m "$2"); MIX=$P/assets/audio/mix.wav
 if [ ! -f "$MIX" ]; then echo "missing $MIX — run scripts/mix_alert.py first"; exit 1; fi
+R=$P/renders/raw.mp4
+if [ ! -f "$R" ]; then
+  R=$(ls -t "$P"/renders/*.mp4 2>/dev/null | head -1 || true)
+fi
+if [ -z "$R" ] || [ ! -f "$R" ]; then echo "no render in $P/renders — run npx hyperframes@0.9.46 render --quality looks"; exit 1; fi
+echo "using render: $R"
+mkdir -p "$(dirname "$O")"; cd "$P/renders"
 ffmpeg -y -v error -i "$R" -c:v libx264 -preset slow -b:v 3200k -pass 1 -passlogfile pass -an -f null -
 ffmpeg -y -v error -i "$R" -i "$MIX" -map 0:v:0 -map 1:a:0 \
   -vf "scale=1080:1920:flags=lanczos,setsar=1" \

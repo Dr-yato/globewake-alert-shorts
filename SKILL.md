@@ -133,7 +133,7 @@ npx hyperframes@0.9.46 render --quality looks   # CRF 16, 1080×1920, 30 fps
 bash scripts/finish_alert.sh . exports/<slug>_alert_short.mp4
 ```
 
-`finish_alert.sh` two-pass encodes the picture and **remuxes `assets/audio/mix.wav`** (do not ship the raw render’s audio). It then prints:
+`finish_alert.sh` two-pass encodes the picture and **remuxes `assets/audio/mix.wav`** (do not ship the raw render’s audio). It uses `renders/raw.mp4` if present, otherwise the newest `renders/*.mp4` that HyperFrames just wrote. It then prints:
 
 - 1080×1920, SAR 1:1, 9:16, 30 fps, duration 15.000 s
 - decode OK
